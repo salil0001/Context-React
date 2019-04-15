@@ -8,17 +8,20 @@ export default class MyProvider extends Component {
         age: 100,
         cool: true
     }
-
+    
+    growAYearOlder=(val)=>{
+        this.setState({
+            age: val
+        })
+     }
     render() {
         return (
             <MyContext.Provider value={{
-                state: this.state, 
-                growAYearOlder: (val) => this.setState({
-                    age: val
-                })
+                ...this.state,
+                growAYearOlder: this.growAYearOlder
             }}>
-            
-          {this.props.children}
+
+                 {this.props.children} 
             </MyContext.Provider>
         )
 

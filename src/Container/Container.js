@@ -14,9 +14,9 @@ class Person extends Component {
             <MyContext.Consumer>
                     {(context) => (
                         <React.Fragment>
-                            <div>I am Inside context {context.state.name}</div>
-                            <div>I am Inside context {context.state.age}</div>
-                            <button onClick={()=>context.growAYearOlder(this.state.val)}>+</button>
+                            <div>I am Inside context {context.name}</div>
+                            <div>I am Inside context {context.age}</div>
+                            <button onClick={()=>context.growAYearOlder(this.state.val)}>ADD+</button>
                         </React.Fragment>
                     )}
                 </MyContext.Consumer>
